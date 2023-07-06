@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+:root{
+    --main-color:#E65F78;
+}
+.suptitle{
+    max-width: 500px;
+}
+.main-color{
+    color: var(--main-color);
+}
+/* setting */
+.setting{
+position: fixed;
+top: 30%;
+left: 0;
+background-color: #7777;
+color: #fff;
+padding: 5px 10px;
+border-radius: 5px;
+font-size: 1.2rem;
+z-index: 9999;
+}
+.arrow{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    padding: 7px 12px;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    z-index: 9999;
+}
+/*  navbar  */
+.navbar a {
+    font-family: 'Montserrat', sans-serif;
+} 
+.navbar-nav .nav-link{
+    font-weight: 25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    transition: all 0.5s;
+}
+ .navbar-nav .nav-link:hover,.navbar-nav .nav-link.active{
+  color: var(--main-color)
+}
+/*  Header  */
+.home{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(../Images/header-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.content-home a{
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    transition: all 0.4s;
+}
+.content-home a:hover{
+    background-color: #fff;
+    color: #000 !important;
+}
+.btn-down{
+    position: absolute;
+    width: 25px;
+    height: 40px;
+    border-radius: 50px;
+    border: solid 2px #fff;
+    bottom: 40px;
+    animation: bonc 0.8s infinite ease-in-out;
+}
+.btn-down::after{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 3px;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+transform: translate(-50%,-50%);
+}
+@keyframes bonc{
+    0%{
+        bottom: 40px;
+    }
+    50%{
+        bottom: 60px;
+    }
+    100%{
+        bottom: 40px;
+    }
+}
+/* section about */
+.icon i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 1px gray;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.icon i:hover{
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+/* section services */
+.services{
+    background-color: #eee;
+}
+.item-services i{
+    color: var(--main-color);
+}
+.item-services h2{
+    position: relative;
+}
+.item-services h2::after{
+    content: "";
+    position: absolute;
+    width: 20%;
+    background-color: var(--main-color);
+    height: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    transition: all 0.4s;
+}
+.item-services:hover h2::after{
+    width: 70%;
+}
+/* section our work */
+
+.nav-tabs{
+font-family: 'Montserrat', sans-serif;
+border: none;
+}
+.nav-tabs .nav-link{
+    border: none;
+    color: #000;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.4s;
+  padding: 8px 16px;
+
+}
+.nav-tabs .nav-link.active,.nav-tabs .nav-link:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.item-protfolio{
+    position: relative;
+    overflow: hidden;
+}
+
+.layer-portfolio{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.4s;
+  opacity: 0;
+}
+.layer-content{
+    position: absolute;
+    top: 100%;
+    transition: all 0.4s;
+}
+.item-protfolio:hover .layer-portfolio{
+    opacity: 1;
+} 
+.item-protfolio:hover .layer-content{
+    top: 50%;
+    transform:translateY(-50%);
+}
+/* section clint  */
+.clint{
+    background-color: #eee;
+}
+.item-clint img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.item-clint i{
+    font-size: 60px;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+.carousel-indicators [data-bs-target]{
+    width: 20px;
+    height: 5px;
+background-color:var(--main-color) ;
+}
+.carousel-indicators .active{
+    width: 35px;
+}
+/* section contact */
+.contact{
+    background-color: #eee;
+}
+.form-control{
+  padding: 10px 15px;
+}
+.btn{
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 15px 25px ;
+    font-size: 1.2rem;
+    transition: all 0.4s;
+}
+.btn:hover{
+    background-color: #d33d58 ;
+    color: #fff;
+}
